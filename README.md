@@ -1,6 +1,11 @@
 # raxios
 Raxios is a wrapper of axios extending some functionallity of url pattern matching used in express library.
 
+## Installation
+```
+npm install --save raxios
+```
+
 ## Usage
 
 ```javascript
