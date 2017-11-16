@@ -1,0 +1,16 @@
+{
+  "name": "raxios",
+  "version": "1.0.0",
+  "description": "Axios library with support of url params match",
+  "main": "index.js",
+  "keywords": [
+    "axios",
+    "path-to-regexp"
+  ],
+  "author": "Alan Maldonado <alan.maldonado@gmail.com> https://github.com/alan-maldonado",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "path-to-regexp": "^2.1.0"
+  }
+}
