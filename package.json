@@ -7,10 +7,22 @@
     "axios",
     "path-to-regexp"
   ],
-  "author": "Alan Maldonado <alan.maldonado@gmail.com> https://github.com/alan-maldonado",
+  "author": "Alan Maldonado <alan.maldonado@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.17.1",
     "path-to-regexp": "^2.1.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alan-maldonado/raxios.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alan-maldonado/raxios/issues"
+  },
+  "homepage": "https://github.com/alan-maldonado/raxios#readme"
 }
