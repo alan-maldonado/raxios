@@ -11,11 +11,27 @@ npm install --save raxios
 ```javascript
 import raxios from 'raxios'
 
-raxios.get('http://quote.foxbusiness.com/feed/profile/:ticker/json', {
+raxios.get('http://myapi.com/:foo/search', {
   urlParams: {
-    ticker: 'AAPL'
+    foo: 'bar'
   }
 }).then(res => console.log(res.data))
 ```
 
-That will produce a request to http://quote.foxbusiness.com/feed/profile/AAPL/json
+This will produce a request to http://myapi.com/bar/search
+
+### Usage with query params
+```javascript
+import raxios from 'raxios'
+
+raxios.get('http://myapi.com/:foo/search', {
+  urlParams: {
+    foo: 'bar'
+  },
+  params: {
+    q: 'soccer'
+  }
+}).then(res => console.log(res.data))
+```
+
+This will produce a request to http://myapi.com/bar/search?q=soccer
