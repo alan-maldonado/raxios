@@ -10,7 +10,7 @@ raxios.interceptors.request.use(function (config) {
     port = url.parse(config.url).port
   } catch (e) {}
 
-  const toPath = pathToRegexp.compile(pathToCompile)
+  const toPath = pathToRegexp.compile(config.url)
   const urlParams = config.urlParams || {}
   if (port) {
     urlParams[port] = ':' + port
