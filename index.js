@@ -16,7 +16,7 @@ raxios.interceptors.request.use(function (config) {
     urlParams[port] = ':' + port
   }
 
-  config.url = `${origin}${toPath(urlParams)}`
+  config.url = toPath(urlParams)
   return config
 }, function (error) {
   return Promise.reject(error)
