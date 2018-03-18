@@ -5,21 +5,17 @@ const url = require('url')
 const raxios = axios.create()
 
 raxios.interceptors.request.use(function (config) {
-  let pathToCompile = ''
-  let origin = ''
-
+  let port
   try {
-    const uri = url.parse(config.url)
-    const { href } = uri
-    origin = uri.origin
-    pathToCompile = href.replace(origin, '')
-  } catch (e) {
-    origin = ''
-    pathToCompile = config.url
-  }
+    port = url.parse(config.url).port
+  } catch (e) {}
 
   const toPath = pathToRegexp.compile(pathToCompile)
   const urlParams = config.urlParams || {}
+  if (port) {
+    urlParams[port] = ':' + port
+  }
+
   config.url = `${origin}${toPath(urlParams)}`
   return config
 }, function (error) {
