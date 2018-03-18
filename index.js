@@ -1,6 +1,6 @@
 const axios = require('axios')
 const pathToRegexp = require('path-to-regexp')
-const { URL } = require('url')
+const url = require('url')
 
 const raxios = axios.create()
 
@@ -9,9 +9,9 @@ raxios.interceptors.request.use(function (config) {
   let origin = ''
 
   try {
-    const url = new URL(config.url)
-    const { href } = url
-    origin = url.origin
+    const uri = url.parse(config.url)
+    const { href } = uri
+    origin = uri.origin
     pathToCompile = href.replace(origin, '')
   } catch (e) {
     origin = ''
