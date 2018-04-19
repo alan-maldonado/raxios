@@ -1,6 +1,6 @@
 {
   "name": "raxios",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Axios library with support of url params match",
   "main": "index.js",
   "keywords": [
